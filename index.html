@@ -889,7 +889,7 @@
                 </div>
                 
                 <div class="hint">
-                    <i class="fas fa-heart"></i> تلميح: كلمة السر هي <strong>Habiba 7ayaty</strong> (كما هي مكتوبة)
+                    <i class="fas fa-heart"></i> تلميح: كلمة السر هي تاريخ ميلادي الخاص
                 </div>
             </div>
         </div>
@@ -1186,8 +1186,8 @@
     </audio>
 
     <script>
-        // كلمة المرور الصحيحة
-        const correctPassword = "Habiba 7ayaty";
+        // كلمة المرور الصحيحة - تم تغييرها إلى تاريخ الميلاد
+        const correctPassword = "28/9/2009";
         
         // عناصر DOM
         const passwordInput = document.getElementById('passwordInput');
@@ -1302,7 +1302,7 @@
                 
                 // اهتزاز مع شدة مختلفة حسب المحاولات
                 const shakeIntensity = Math.min(20 + wrongAttempts * 5, 40);
-                passwordInput.style.animation = `shake${wrongAttempts} 0.5s`;
+                passwordInput.style.animation = `shake${Math.min(wrongAttempts, 3)} 0.5s`;
                 
                 // إضافة أنماط اهتزاز مختلفة
                 const style = document.createElement('style');
