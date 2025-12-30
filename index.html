@@ -1,0 +1,1493 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Habiba 7ayaty ❤️ | رسالة حب إلى حياتي</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* أنماط عامة */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #1a0b2e 0%, #4a1e6b 50%, #8b5a9c 100%);
+            color: #fff;
+            font-family: 'Cairo', sans-serif;
+            line-height: 1.8;
+            overflow-x: hidden;
+            min-height: 100vh;
+            position: relative;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* صفحة الدخول */
+        #loginPage {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #ff007a 0%, #8a2be2 50%, #4b0082 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            transition: opacity 1s ease;
+        }
+        
+        .login-container {
+            width: 100%;
+            max-width: 500px;
+            padding: 30px;
+        }
+        
+        .love-box {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(15px);
+            border-radius: 20px;
+            padding: 50px 40px;
+            text-align: center;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            animation: fadeIn 1.5s ease;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(50px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .love-title {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            background: linear-gradient(45deg, #ff1493, #ff69b4, #ffb6c1);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            text-shadow: 0 0 30px rgba(255, 20, 147, 0.5);
+        }
+        
+        .love-subtitle {
+            font-size: 1.3rem;
+            margin-bottom: 30px;
+            color: rgba(255, 255, 255, 0.9);
+        }
+        
+        .password-form {
+            margin-bottom: 30px;
+        }
+        
+        .password-input {
+            width: 100%;
+            padding: 18px 20px;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            border-radius: 15px;
+            font-size: 18px;
+            text-align: center;
+            margin-bottom: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            transition: all 0.3s ease;
+        }
+        
+        .password-input:focus {
+            outline: none;
+            border-color: #ff1493;
+            background: rgba(255, 255, 255, 0.2);
+            box-shadow: 0 0 20px rgba(255, 20, 147, 0.5);
+        }
+        
+        .password-btn {
+            background: linear-gradient(45deg, #ff1493, #ff69b4);
+            color: white;
+            border: none;
+            border-radius: 15px;
+            padding: 18px 30px;
+            font-size: 18px;
+            font-weight: 600;
+            cursor: pointer;
+            width: 100%;
+            transition: all 0.3s ease;
+        }
+        
+        .password-btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(255, 20, 147, 0.4);
+        }
+        
+        .error-message {
+            color: #ff6b6b;
+            margin-top: 15px;
+            font-weight: 600;
+            display: none;
+        }
+        
+        .hint {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 14px;
+            margin-top: 20px;
+            padding: 10px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            border-right: 3px solid #ff69b4;
+        }
+        
+        .birthday-hint {
+            color: #ff1493;
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-top: 15px;
+            padding: 10px;
+            background: rgba(255, 20, 147, 0.1);
+            border-radius: 10px;
+            border: 2px dashed #ff69b4;
+            animation: pulse 2s infinite;
+            display: none;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+        
+        /* خلفية متحركة */
+        .love-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            overflow: hidden;
+        }
+        
+        .floating-heart {
+            position: absolute;
+            color: rgba(255, 105, 180, 0.3);
+            font-size: 24px;
+            animation: float 20s infinite linear;
+        }
+        
+        .floating-kiss {
+            position: absolute;
+            font-size: 28px;
+            animation: float-kiss 15s infinite linear;
+        }
+        
+        @keyframes float {
+            0% {
+                transform: translateY(100vh) rotate(0deg);
+                opacity: 0;
+            }
+            10% {
+                opacity: 1;
+            }
+            90% {
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-100px) rotate(360deg);
+                opacity: 0;
+            }
+        }
+        
+        @keyframes float-kiss {
+            0% {
+                transform: translateY(100vh) translateX(0) rotate(0deg);
+                opacity: 0;
+            }
+            10% {
+                opacity: 1;
+            }
+            90% {
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-100px) translateX(100px) rotate(360deg);
+                opacity: 0;
+            }
+        }
+        
+        /* المحتوى الرئيسي */
+        #mainContent {
+            display: none;
+            opacity: 0;
+            transition: opacity 1s ease;
+        }
+        
+        /* شريط التقدم */
+        .scroll-progress {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: transparent;
+            z-index: 9998;
+        }
+        
+        .scroll-progress-bar {
+            height: 100%;
+            background: linear-gradient(90deg, #ff1493, #ff69b4, #ffb6c1);
+            width: 0%;
+            transition: width 0.3s ease;
+        }
+        
+        /* زر العودة للأعلى */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(45deg, #ff1493, #ff69b4);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            cursor: pointer;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.3s ease;
+            z-index: 9997;
+            box-shadow: 0 10px 30px rgba(255, 20, 147, 0.4);
+        }
+        
+        .back-to-top.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .back-to-top:hover {
+            transform: translateY(-10px) scale(1.1);
+            box-shadow: 0 15px 40px rgba(255, 20, 147, 0.6);
+        }
+        
+        /* عناصر التحكم بالموسيقى */
+        .music-controls {
+            position: fixed;
+            bottom: 30px;
+            left: 30px;
+            z-index: 9997;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 15px 25px;
+            border-radius: 50px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.3s ease;
+        }
+        
+        .music-controls:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.15);
+        }
+        
+        .music-btn {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: linear-gradient(45deg, #ff1493, #ff69b4);
+            color: white;
+            border: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .music-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 5px 20px rgba(255, 20, 147, 0.5);
+        }
+        
+        .volume-slider {
+            width: 120px;
+            height: 6px;
+            -webkit-appearance: none;
+            appearance: none;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+            outline: none;
+        }
+        
+        .volume-slider::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: #ff1493;
+            cursor: pointer;
+            box-shadow: 0 0 10px rgba(255, 20, 147, 0.8);
+        }
+        
+        .music-label {
+            font-weight: 600;
+            color: white;
+            font-size: 16px;
+        }
+        
+        /* تأثيرات الظهور */
+        .fade-in-up {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 1s ease, transform 1s ease;
+        }
+        
+        .fade-in-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .fade-in-left {
+            opacity: 0;
+            transform: translateX(100px);
+            transition: opacity 1s ease, transform 1s ease;
+        }
+        
+        .fade-in-left.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        
+        .fade-in-right {
+            opacity: 0;
+            transform: translateX(-100px);
+            transition: opacity 1s ease, transform 1s ease;
+        }
+        
+        .fade-in-right.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        
+        .scale-in {
+            opacity: 0;
+            transform: scale(0.8);
+            transition: opacity 1s ease, transform 1s ease;
+        }
+        
+        .scale-in.visible {
+            opacity: 1;
+            transform: scale(1);
+        }
+        
+        .bounce-in {
+            opacity: 0;
+            transform: scale(0.5) translateY(50px);
+            transition: opacity 0.8s ease, transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        
+        .bounce-in.visible {
+            opacity: 1;
+            transform: scale(1) translateY(0);
+        }
+        
+        /* محتوى الحب */
+        .love-hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            padding: 100px 0;
+            background: radial-gradient(circle at center, rgba(255, 20, 147, 0.2) 0%, transparent 70%);
+        }
+        
+        .love-message {
+            max-width: 900px;
+            text-align: center;
+            padding: 40px;
+        }
+        
+        .love-heart {
+            font-size: 100px;
+            color: #ff1493;
+            margin-bottom: 30px;
+            animation: heartbeat 1.5s infinite;
+            text-shadow: 0 0 50px rgba(255, 20, 147, 0.8);
+        }
+        
+        @keyframes heartbeat {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+        }
+        
+        .love-greeting {
+            font-size: 4rem;
+            margin-bottom: 20px;
+            background: linear-gradient(45deg, #ff1493, #ff69b4, #ffb6c1);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            line-height: 1.2;
+        }
+        
+        .love-text {
+            font-size: 1.8rem;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 40px;
+        }
+        
+        /* أقسام الحب */
+        .love-section {
+            padding: 100px 0;
+            position: relative;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 3rem;
+            margin-bottom: 60px;
+            color: #ffb6c1;
+            position: relative;
+            padding-bottom: 20px;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background: linear-gradient(90deg, #ff1493, #ff69b4);
+            border-radius: 2px;
+        }
+        
+        /* بطاقات الحب */
+        .love-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+        
+        .love-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 40px 30px;
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .love-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(90deg, #ff1493, #ff69b4);
+        }
+        
+        .love-card:hover {
+            transform: translateY(-20px) scale(1.02);
+            background: rgba(255, 255, 255, 0.15);
+            box-shadow: 0 20px 50px rgba(255, 20, 147, 0.3);
+        }
+        
+        .card-icon {
+            font-size: 50px;
+            color: #ff69b4;
+            margin-bottom: 20px;
+            text-shadow: 0 0 20px rgba(255, 105, 180, 0.5);
+        }
+        
+        .card-title {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: #ffb6c1;
+        }
+        
+        .card-text {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 1.2rem;
+            line-height: 1.8;
+        }
+        
+        /* معرض الصور */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 50px;
+        }
+        
+        .gallery-item {
+            border-radius: 15px;
+            overflow: hidden;
+            position: relative;
+            height: 300px;
+            transition: all 0.4s ease;
+        }
+        
+        .gallery-item:hover {
+            transform: scale(1.05) rotate(2deg);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+        }
+        
+        .gallery-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .gallery-item:hover .gallery-img {
+            transform: scale(1.1);
+        }
+        
+        .gallery-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 20px;
+            background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+            color: white;
+            transform: translateY(100%);
+            transition: transform 0.3s ease;
+        }
+        
+        .gallery-item:hover .gallery-overlay {
+            transform: translateY(0);
+        }
+        
+        /* رسائل الحب */
+        .love-messages-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .message-box {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 40px;
+            border-left: 5px solid #ff1493;
+            transition: all 0.3s ease;
+        }
+        
+        .message-box:hover {
+            transform: translateX(-10px);
+            background: rgba(255, 255, 255, 0.15);
+        }
+        
+        .message-text {
+            font-size: 1.4rem;
+            line-height: 1.8;
+            color: rgba(255, 255, 255, 0.95);
+            margin-bottom: 20px;
+        }
+        
+        .message-emojis {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        
+        .emoji {
+            font-size: 1.8rem;
+            animation: bounce 2s infinite;
+        }
+        
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        
+        /* زر القراءة الخاص */
+        .special-button-container {
+            text-align: center;
+            margin: 60px 0;
+        }
+        
+        .special-button {
+            background: linear-gradient(45deg, #ff1493, #ff69b4);
+            color: white;
+            border: none;
+            border-radius: 50px;
+            padding: 20px 50px;
+            font-size: 1.5rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.5s ease;
+            box-shadow: 0 10px 30px rgba(255, 20, 147, 0.4);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .special-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.7s ease;
+        }
+        
+        .special-button:hover::before {
+            left: 100%;
+        }
+        
+        .special-button:hover {
+            transform: translateY(-10px) scale(1.05);
+            box-shadow: 0 20px 50px rgba(255, 20, 147, 0.6);
+        }
+        
+        .special-button:active {
+            transform: translateY(-5px) scale(1.02);
+        }
+        
+        /* رسالة خاصة */
+        .special-message {
+            display: none;
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(20px);
+            border-radius: 20px;
+            padding: 50px;
+            margin: 40px auto;
+            max-width: 800px;
+            border: 2px solid #ff69b4;
+            box-shadow: 0 20px 60px rgba(255, 20, 147, 0.3);
+            animation: messageAppear 1s ease;
+        }
+        
+        @keyframes messageAppear {
+            0% {
+                opacity: 0;
+                transform: translateY(50px) scale(0.8);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+        
+        .special-message-title {
+            font-size: 2.5rem;
+            color: #ffb6c1;
+            text-align: center;
+            margin-bottom: 30px;
+            position: relative;
+        }
+        
+        .special-message-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 150px;
+            height: 3px;
+            background: linear-gradient(90deg, #ff1493, #ff69b4);
+            border-radius: 2px;
+        }
+        
+        .special-message-text {
+            font-size: 1.4rem;
+            line-height: 1.9;
+            color: rgba(255, 255, 255, 0.95);
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .special-message-emojis {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 30px;
+        }
+        
+        .special-emoji {
+            font-size: 2rem;
+            animation: heartBeat 1.5s infinite;
+        }
+        
+        @keyframes heartBeat {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.3); }
+        }
+        
+        /* الفوتر */
+        .love-footer {
+            background: rgba(0, 0, 0, 0.5);
+            padding: 80px 0 40px;
+            margin-top: 100px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .footer-content {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .footer-title {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            color: #ffb6c1;
+        }
+        
+        .footer-text {
+            font-size: 1.3rem;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 40px;
+        }
+        
+        .signature {
+            font-size: 2rem;
+            color: #ff69b4;
+            margin-top: 40px;
+            font-family: 'Amiri', serif;
+        }
+        
+        /* تصميم متجاوب */
+        @media (max-width: 768px) {
+            .love-title {
+                font-size: 2.5rem;
+            }
+            
+            .love-greeting {
+                font-size: 2.8rem;
+            }
+            
+            .love-text {
+                font-size: 1.4rem;
+            }
+            
+            .section-title {
+                font-size: 2.2rem;
+            }
+            
+            .message-text {
+                font-size: 1.2rem;
+            }
+            
+            .music-controls {
+                bottom: 20px;
+                left: 20px;
+                padding: 12px 20px;
+            }
+            
+            .back-to-top {
+                bottom: 20px;
+                right: 20px;
+                width: 50px;
+                height: 50px;
+            }
+            
+            .gallery {
+                grid-template-columns: 1fr;
+            }
+            
+            .special-button {
+                padding: 18px 40px;
+                font-size: 1.3rem;
+            }
+            
+            .special-message {
+                padding: 30px 20px;
+            }
+            
+            .special-message-title {
+                font-size: 2rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .love-box {
+                padding: 40px 20px;
+            }
+            
+            .love-title {
+                font-size: 2rem;
+            }
+            
+            .love-greeting {
+                font-size: 2.2rem;
+            }
+            
+            .section-title {
+                font-size: 1.8rem;
+            }
+            
+            .love-card {
+                padding: 30px 20px;
+            }
+            
+            .message-box {
+                padding: 30px 20px;
+            }
+            
+            .special-button {
+                padding: 15px 30px;
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- صفحة الدخول -->
+    <div id="loginPage">
+        <!-- خلفية متحركة -->
+        <div class="love-background" id="loveBackground"></div>
+        
+        <!-- محتوى صفحة الدخول -->
+        <div class="login-container">
+            <div class="love-box">
+                <div class="love-heart">
+                    <i class="fas fa-heart"></i>
+                </div>
+                <h1 class="love-title">Habiba 7ayaty ❤️</h1>
+                <p class="love-subtitle">رسالة حب خاصة إلى نور عيني وروحي</p>
+                
+                <div class="password-form">
+                    <input type="password" class="password-input" id="passwordInput" placeholder="أدخل كلمة السر للدخول إلى قلبي" autocomplete="off">
+                    <button class="password-btn" id="passwordBtn">
+                        <i class="fas fa-heart"></i> أدخل إلى عالم حبنا
+                    </button>
+                    <div class="error-message" id="errorMessage">
+                        كلمة السر غير صحيحة. حاول مرة أخرى يا حبيبي ❤️
+                    </div>
+                    <div class="birthday-hint" id="birthdayHint"></div>
+                </div>
+                
+                <div class="hint">
+                    <i class="fas fa-heart"></i> تلميح: كلمة السر هي <strong>Habiba 7ayaty</strong> (كما هي مكتوبة)
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- المحتوى الرئيسي -->
+    <div id="mainContent">
+        <!-- شريط التقدم -->
+        <div class="scroll-progress">
+            <div class="scroll-progress-bar" id="scrollProgressBar"></div>
+        </div>
+        
+        <!-- زر العودة للأعلى -->
+        <div class="back-to-top" id="backToTop">
+            <i class="fas fa-heart"></i>
+        </div>
+        
+        <!-- عناصر التحكم بالموسيقى -->
+        <div class="music-controls">
+            <span class="music-label">موسيقى الحب:</span>
+            <button class="music-btn" id="playPauseBtn">
+                <i class="fas fa-play"></i>
+            </button>
+            <input type="range" min="0" max="100" value="50" class="volume-slider" id="volumeSlider">
+        </div>
+        
+        <!-- القسم الرئيسي -->
+        <section class="love-hero" id="home">
+            <div class="container">
+                <div class="love-message fade-in-up">
+                    <div class="love-heart">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h1 class="love-greeting">حبيبتي روحي ونور عيني ❤️🫂💋</h1>
+                    <p class="love-text">
+                        كل لحظة بعيشها معاكي فيها حنان مالي الدنيا طيبة وحب مش طبيعي 💖✨
+                        قلبي بيخفق ليكِ وبينبض باسمك، وكل غيرة فيّ بتكون عليكي عشان انتي أغلى ما أملك 💝🥹
+                    </p>
+                    <div class="message-emojis">
+                        <span class="emoji">❤️</span>
+                        <span class="emoji">🫂</span>
+                        <span class="emoji">💋</span>
+                        <span class="emoji">💖</span>
+                        <span class="emoji">✨</span>
+                        <span class="emoji">💝</span>
+                        <span class="emoji">🥹</span>
+                        <span class="emoji">😍</span>
+                        <span class="emoji">🥰</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- مشاعرنا -->
+        <section class="love-section" id="feelings">
+            <div class="container">
+                <h2 class="section-title fade-in-up">مشاعرنا 💞</h2>
+                
+                <div class="love-cards">
+                    <div class="love-card scale-in">
+                        <div class="card-icon">
+                            <i class="fas fa-heartbeat"></i>
+                        </div>
+                        <h3 class="card-title">حب غير طبيعي ❤️</h3>
+                        <p class="card-text">
+                            إحساسي معاكِ مختلف، مليان بوس ونعناع، وبحلم بإحضان تخلينا ننسا العالم 🫂💋🔥
+                            يدي بتبحث عن إيديكي، وقلبي بيسكن في حضنك 💕🫦
+                        </p>
+                    </div>
+                    
+                    <div class="love-card scale-in">
+                        <div class="card-icon">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h3 class="card-title">أنتِ كل شيء ✨</h3>
+                        <p class="card-text">
+                            أنتِ نبضي وضلعي الناعم، وعمري كله ما هيكفي عشان أوصلكي قد ما انتي تستحقي 💍😻
+                            كل يوم بيزيد شوقي ليكي، وكل نظرة من عينيكي بتخليني أعيش في دنيا تانية 👀✨
+                        </p>
+                    </div>
+                    
+                    <div class="love-card scale-in">
+                        <div class="card-icon">
+                            <i class="fas fa-crown"></i>
+                        </div>
+                        <h3 class="card-title">غيّانة عليكي 👑</h3>
+                        <p class="card-text">
+                            غيّانة عليكي لأنكِ أغلى كنز، وحنينة ليكي لأنكِ جنتي على الأرض 🌟💝
+                            نفسي في بوسة تذوب فيها الشفايف، وإحضان يخلينا قلب واحد 💋🫠
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- معرض صور الحب -->
+                <div class="gallery">
+                    <div class="gallery-item fade-in-left">
+                        <img src="https://images.unsplash.com/photo-1518568814500-bf0f8d125f46?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="حب وعاطفة" class="gallery-img">
+                        <div class="gallery-overlay">حبنا أبدي 💘</div>
+                    </div>
+                    
+                    <div class="gallery-item fade-in-up">
+                        <img src="https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="احتضان" class="gallery-img">
+                        <div class="gallery-overlay">احتضان يذوب ❤️‍🔥</div>
+                    </div>
+                    
+                    <div class="gallery-item fade-in-right">
+                        <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="قبلات" class="gallery-img">
+                        <div class="gallery-overlay">قبلات لا تنتهي 💋</div>
+                    </div>
+                    
+                    <div class="gallery-item fade-in-left">
+                        <img src="https://images.unsplash.com/photo-1518568814500-bf0f8d125f46?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="يد في يد" class="gallery-img">
+                        <div class="gallery-overlay">يد في يد للأبد 🤲</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- رسائل الحب -->
+        <section class="love-section" id="messages" style="background: rgba(0, 0, 0, 0.2);">
+            <div class="container">
+                <h2 class="section-title fade-in-up">رسائل حب 📝</h2>
+                
+                <div class="love-messages-container">
+                    <div class="message-box fade-in-right">
+                        <p class="message-text">
+                            يا قمر عيني وسكن قلبي 🥰🌙<br>
+                            كل كلمة بحبك بتكون أقلّ من اللي جوايا، بس هحاول أوصللك جزء من السما اللي انتي خلقتيها في قلبي 💖✨.<br>
+                            إنتي مش بس حبيبتي، إنتي رفيقة الدرب، وسندي، والبيت اللي برجعله كل يوم 🏡💕.
+                        </p>
+                        <div class="message-emojis">
+                            <span class="emoji">🥰</span>
+                            <span class="emoji">🌙</span>
+                            <span class="emoji">💖</span>
+                            <span class="emoji">✨</span>
+                            <span class="emoji">🏡</span>
+                            <span class="emoji">💕</span>
+                        </div>
+                    </div>
+                    
+                    <div class="message-box fade-in-left">
+                        <p class="message-text">
+                            يا سكن قلبي ونبضه 💓، يا نور عيوني وروحي 😍✨<br>
+                            أنا كل حاجة بالنسبالك. أنا محمل الدنيا كلها عشانك🌍🤗✨<br>
+                            أنتِ قلب بابا الحنون 😻👨‍👧، أنتِ بنوتي الغالية 👑🍬، أنتِ أميرتي اللي ماكنتش أحلم بيها 🤴💖
+                        </p>
+                        <div class="message-emojis">
+                            <span class="emoji">💓</span>
+                            <span class="emoji">😍</span>
+                            <span class="emoji">✨</span>
+                            <span class="emoji">🌍</span>
+                            <span class="emoji">🤗</span>
+                            <span class="emoji">😻</span>
+                        </div>
+                    </div>
+                    
+                    <div class="message-box fade-in-right">
+                        <p class="message-text">
+                            حبيبتي وبنوتي ومراتي ❤️<br>
+                            إنتِ أجمل إحساس عدى على قلبي، وأحن حاجة حضنت روحي قبل جسمي 🫂<br>
+                            معاكي الدنيا بتهدى، والوقت بيقف، وكل حاجة وحشة بتختفي أول ما أسمع صوتك أو أشوف ضحكتك 🥹☺️
+                        </p>
+                        <div class="message-emojis">
+                            <span class="emoji">❤️</span>
+                            <span class="emoji">🫂</span>
+                            <span class="emoji">🥹</span>
+                            <span class="emoji">☺️</span>
+                            <span class="emoji">💋</span>
+                            <span class="emoji">🤗</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- زر القراءة الخاصة -->
+                <div class="special-button-container bounce-in">
+                    <button class="special-button" id="readMessageBtn">
+                        <i class="fas fa-heart"></i> اقرأي دي يا روحي <i class="fas fa-heart"></i>
+                    </button>
+                </div>
+                
+                <!-- الرسالة الخاصة -->
+                <div class="special-message" id="specialMessage">
+                    <h3 class="special-message-title">رسالة خاصة لحبيبتي ❤️</h3>
+                    <p class="special-message-text">
+                        يا حبيبتي روحي ونور عيني،<br><br>
+                        أنا عارف إنكِ ممكن تنسي حاجات كتير عني، وأحيانا ممكن تنسي حاجات بس اللي عايز أقولهولك إني:<br>
+                        <strong>بحبك وبعشقك وهفضل أحبك أكتر وأكتر، وبدمنك طول حياتي، ربنا يخليكي ليا يا بنوتي.</strong><br><br>
+                        إنتي أغلى ما عندي في الدنيا، وكل يوم معاكي هو أحلى هدية ربنا منّها عليّ بيها.<br>
+                        شكرًا لأنكِ موجودة في حياتي، وشكرًا لأنكِ أنتِ.
+                    </p>
+                    <div class="special-message-emojis">
+                        <span class="special-emoji">❤️</span>
+                        <span class="special-emoji">🥹</span>
+                        <span class="special-emoji">😍</span>
+                        <span class="special-emoji">🥰</span>
+                        <span class="special-emoji">💕</span>
+                        <span class="special-emoji">💖</span>
+                        <span class="special-emoji">💝</span>
+                        <span class="special-emoji">💋</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- المستقبل -->
+        <section class="love-section" id="future">
+            <div class="container">
+                <h2 class="section-title fade-in-up">مستقبلنا 🏡👨‍👩‍👧‍👦</h2>
+                
+                <div class="love-cards">
+                    <div class="love-card fade-in-left">
+                        <div class="card-icon">
+                            <i class="fas fa-home"></i>
+                        </div>
+                        <h3 class="card-title">بيتنا 🏡</h3>
+                        <p class="card-text">
+                            بنبني مع بعض بيت مليان ضحك، وبيتسمع فيه قهقهة عيالنا الحلوين 🏠🤗<br>
+                            بنشوف فيهم صورتك وابتسامتك، وبنربي فيهم طيبتك وقلبك الذهبي 👶👧🥰
+                        </p>
+                    </div>
+                    
+                    <div class="love-card fade-in-up">
+                        <div class="card-icon">
+                            <i class="fas fa-plane"></i>
+                        </div>
+                        <h3 class="card-title">رحلاتنا ✈️</h3>
+                        <p class="card-text">
+                            هنسافر ونكتشف العالم مع بعض، وكل مكان هنزوره هيكون لنا فيه ذكرى خاصة ✈️🗺️💌<br>
+                            بنحلم سوا ونحقق أحلامنا، خطوة خطوة وإيد في إيد 💞🚶‍♂️🚶‍♀️
+                        </p>
+                    </div>
+                    
+                    <div class="love-card fade-in-right">
+                        <div class="card-icon">
+                            <i class="fas fa-heart-circle-plus"></i>
+                        </div>
+                        <h3 class="card-title">حياتنا معًا 💘</h3>
+                        <p class="card-text">
+                            هنتقدم في السن وإيدينا متقابلين، وكل شبة في وشك هتبقى أحلى من اللي قبلها 👵👴💝<br>
+                            هفضل أغمرك من تحت النظارة، وهتفضلين تضحكي عليّ بنفس الطريقة 🤓😉😂
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- الخاتمة -->
+        <footer class="love-footer" id="conclusion">
+            <div class="container">
+                <div class="footer-content fade-in-up">
+                    <h2 class="footer-title">خلاصة الكلام 💌</h2>
+                    <p class="footer-text">
+                        إنتي حبي، وحياتي، ومستقبلي، وكل تفصيلة جميلة هتحصل لي 💍❤️‍🔥<br>
+                        مش هتعب إيدك في إيدي، ومش هتخفِي يوم من الأيام، لأنك ست الحبايب وأم العيال اللي بتمنّاها 👑🌟<br>
+                        نور عينيّ، وهفضل أدعي ربنا يخليك لي، ويحميكي، ويسعدك قد ما تسعديني 🤲💕
+                    </p>
+                    
+                    <div class="message-emojis" style="justify-content: center; margin: 30px 0;">
+                        <span class="emoji">❤️</span>
+                        <span class="emoji">🫂</span>
+                        <span class="emoji">💋</span>
+                        <span class="emoji">🥹</span>
+                        <span class="emoji">☺️</span>
+                        <span class="emoji">😘</span>
+                        <span class="emoji">😊</span>
+                        <span class="emoji">💍</span>
+                        <span class="emoji">🤭</span>
+                        <span class="emoji">😍</span>
+                        <span class="emoji">🥰</span>
+                        <span class="emoji">🥳</span>
+                        <span class="emoji">🙃</span>
+                        <span class="emoji">✨</span>
+                        <span class="emoji">💕</span>
+                        <span class="emoji">🤗</span>
+                        <span class="emoji">🤩</span>
+                    </div>
+                    
+                    <p class="footer-text" style="font-size: 1.5rem; margin-top: 40px;">
+                        بحبك أكتر من أي حاجة في الدنيا، وحياتي ما تساوي غير بوجودك فيها 💖🌍
+                    </p>
+                    
+                    <p class="signature">
+                        حبيب قلبك ❤️<br>
+                        إلى الأبد وإلى ما بعد الأبد 💫
+                    </p>
+                </div>
+            </div>
+        </footer>
+    </div>
+    
+    <!-- عنصر الموسيقى -->
+    <audio id="backgroundMusic" loop>
+        <source src="https://assets.mixkit.co/music/preview/mixkit-serene-view-443.mp3" type="audio/mpeg">
+    </audio>
+
+    <script>
+        // كلمة المرور الصحيحة
+        const correctPassword = "Habiba 7ayaty";
+        
+        // عناصر DOM
+        const passwordInput = document.getElementById('passwordInput');
+        const passwordBtn = document.getElementById('passwordBtn');
+        const errorMessage = document.getElementById('errorMessage');
+        const birthdayHint = document.getElementById('birthdayHint');
+        const mainContent = document.getElementById('mainContent');
+        const loginPage = document.getElementById('loginPage');
+        const loveBackground = document.getElementById('loveBackground');
+        const readMessageBtn = document.getElementById('readMessageBtn');
+        const specialMessage = document.getElementById('specialMessage');
+        
+        // متغيرات لمتابعة عدد المحاولات
+        let wrongAttempts = 0;
+        let errorMessages = [
+            "حاولي تاني يا بنوتي ❤️",
+            "أنا زعلان يا بنوتي، ناسية عيد ميلادي؟ 😢",
+            "الباسورد: 28/9/2009 - أنا زعلان 🥹"
+        ];
+        
+        // إنشاء القلوب والقبلات المتحركة
+        function createFloatingElements() {
+            const elementsCount = 60;
+            
+            for (let i = 0; i < elementsCount; i++) {
+                const element = document.createElement('div');
+                
+                // قرر إذا كان سيكون قلبًا أو قبلة
+                if (Math.random() > 0.5) {
+                    element.className = 'floating-heart';
+                    element.innerHTML = '<i class="fas fa-heart"></i>';
+                    element.style.color = `rgba(255, ${Math.random() * 105 + 20}, ${Math.random() * 180 + 75}, ${Math.random() * 0.3 + 0.2})`;
+                    element.style.fontSize = (Math.random() * 20 + 15) + 'px';
+                    element.style.animationDuration = (Math.random() * 10 + 15) + 's';
+                } else {
+                    element.className = 'floating-kiss';
+                    element.innerHTML = '💋';
+                    element.style.color = `rgba(255, ${Math.random() * 100 + 50}, ${Math.random() * 100 + 100}, ${Math.random() * 0.4 + 0.3})`;
+                    element.style.fontSize = (Math.random() * 15 + 20) + 'px';
+                    element.style.animationDuration = (Math.random() * 8 + 12) + 's';
+                }
+                
+                // مواضع عشوائية
+                element.style.left = Math.random() * 100 + '%';
+                element.style.animationDelay = Math.random() * 20 + 's';
+                
+                loveBackground.appendChild(element);
+            }
+        }
+        
+        // التحقق من كلمة المرور
+        passwordBtn.addEventListener('click', checkPassword);
+        passwordInput.addEventListener('keypress', function(event) {
+            if (event.key === 'Enter') {
+                checkPassword();
+            }
+        });
+        
+        function checkPassword() {
+            const enteredPassword = passwordInput.value.trim();
+            
+            if (enteredPassword === correctPassword) {
+                // نجاح
+                errorMessage.style.display = 'none';
+                birthdayHint.style.display = 'none';
+                
+                // تأثيرات النجاح
+                passwordInput.style.borderColor = '#4CAF50';
+                passwordInput.style.boxShadow = '0 0 20px rgba(76, 175, 80, 0.5)';
+                passwordBtn.innerHTML = '<i class="fas fa-heart"></i> نجاح! أدخل إلى قلبي ❤️';
+                passwordBtn.style.background = 'linear-gradient(45deg, #4CAF50, #8BC34A)';
+                
+                // إعادة تعيين محاولات الخطأ
+                wrongAttempts = 0;
+                
+                // الانتقال إلى المحتوى الرئيسي
+                setTimeout(() => {
+                    loginPage.style.opacity = '0';
+                    
+                    setTimeout(() => {
+                        loginPage.style.display = 'none';
+                        mainContent.style.display = 'block';
+                        
+                        setTimeout(() => {
+                            mainContent.style.opacity = '1';
+                            initMainContent();
+                        }, 100);
+                    }, 500);
+                }, 1000);
+            } else {
+                // خطأ
+                wrongAttempts++;
+                
+                // تحديث رسالة الخطأ بناءً على عدد المحاولات
+                if (wrongAttempts <= errorMessages.length) {
+                    errorMessage.textContent = errorMessages[wrongAttempts - 1];
+                    errorMessage.style.display = 'block';
+                    
+                    // إظهار تلميح عيد الميلاد في المحاولة الثالثة
+                    if (wrongAttempts === 3) {
+                        birthdayHint.textContent = "تلميح: الباسورد هو تاريخ ميلادي: 28/9/2009";
+                        birthdayHint.style.display = 'block';
+                    }
+                } else {
+                    errorMessage.textContent = "لا تيأسي يا حبيبتي، حاولي مرة أخرى ❤️";
+                    errorMessage.style.display = 'block';
+                }
+                
+                // تأثيرات الخطأ
+                passwordInput.style.borderColor = '#ff6b6b';
+                passwordInput.style.boxShadow = '0 0 20px rgba(255, 107, 107, 0.5)';
+                
+                // اهتزاز مع شدة مختلفة حسب المحاولات
+                const shakeIntensity = Math.min(20 + wrongAttempts * 5, 40);
+                passwordInput.style.animation = `shake${wrongAttempts} 0.5s`;
+                
+                // إضافة أنماط اهتزاز مختلفة
+                const style = document.createElement('style');
+                style.textContent = `
+                    @keyframes shake1 {
+                        0%, 100% { transform: translateX(0); }
+                        10%, 30%, 50%, 70%, 90% { transform: translateX(-${shakeIntensity}px); }
+                        20%, 40%, 60%, 80% { transform: translateX(${shakeIntensity}px); }
+                    }
+                    @keyframes shake2 {
+                        0%, 100% { transform: translateY(0); }
+                        25% { transform: translateY(-${shakeIntensity}px); }
+                        50% { transform: translateY(${shakeIntensity}px); }
+                        75% { transform: translateY(-${shakeIntensity}px); }
+                    }
+                    @keyframes shake3 {
+                        0%, 100% { transform: rotate(0deg); }
+                        25% { transform: rotate(-5deg); }
+                        50% { transform: rotate(5deg); }
+                        75% { transform: rotate(-5deg); }
+                    }
+                `;
+                document.head.appendChild(style);
+                
+                setTimeout(() => {
+                    passwordInput.style.animation = '';
+                }, 500);
+                
+                // مسح الحقل
+                passwordInput.value = '';
+                passwordInput.focus();
+            }
+        }
+        
+        // تهيئة المحتوى الرئيسي
+        function initMainContent() {
+            // إنشاء عناصر متحركة إضافية
+            createFloatingElements();
+            
+            // التحكم بالموسيقى
+            const backgroundMusic = document.getElementById('backgroundMusic');
+            const playPauseBtn = document.getElementById('playPauseBtn');
+            const volumeSlider = document.getElementById('volumeSlider');
+            
+            // تشغيل الموسيقى تلقائياً
+            setTimeout(() => {
+                backgroundMusic.volume = 0.5;
+                backgroundMusic.play().catch(e => {
+                    console.log("التشغيل التلقائي للموسيقى غير مسموح");
+                });
+            }, 1000);
+            
+            // التحكم بتشغيل/إيقاف الموسيقى
+            playPauseBtn.addEventListener('click', function() {
+                if (backgroundMusic.paused) {
+                    backgroundMusic.play();
+                    playPauseBtn.innerHTML = '<i class="fas fa-pause"></i>';
+                } else {
+                    backgroundMusic.pause();
+                    playPauseBtn.innerHTML = '<i class="fas fa-play"></i>';
+                }
+            });
+            
+            // التحكم بمستوى الصوت
+            volumeSlider.addEventListener('input', function() {
+                backgroundMusic.volume = this.value / 100;
+            });
+            
+            // تحديث أيقونة التشغيل
+            backgroundMusic.addEventListener('play', function() {
+                playPauseBtn.innerHTML = '<i class="fas fa-pause"></i>';
+            });
+            
+            backgroundMusic.addEventListener('pause', function() {
+                playPauseBtn.innerHTML = '<i class="fas fa-play"></i>';
+            });
+            
+            // زر القراءة الخاصة
+            readMessageBtn.addEventListener('click', function() {
+                specialMessage.style.display = 'block';
+                readMessageBtn.innerHTML = '<i class="fas fa-heart"></i> شكرًا لأنكِ قرأتي يا روحي <i class="fas fa-heart"></i>';
+                readMessageBtn.style.background = 'linear-gradient(45deg, #4CAF50, #8BC34A)';
+                
+                // تأثير اهتزاز للزر بعد النقر
+                readMessageBtn.style.animation = 'shake1 0.5s';
+                setTimeout(() => {
+                    readMessageBtn.style.animation = '';
+                }, 500);
+                
+                // تمرير إلى الرسالة
+                setTimeout(() => {
+                    specialMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                }, 300);
+            });
+            
+            // شريط تقدم التمرير
+            const scrollProgressBar = document.getElementById('scrollProgressBar');
+            const backToTop = document.getElementById('backToTop');
+            
+            window.addEventListener('scroll', function() {
+                const totalHeight = document.body.scrollHeight - window.innerHeight;
+                const progress = (window.pageYOffset / totalHeight) * 100;
+                scrollProgressBar.style.width = progress + "%";
+                
+                // إظهار/إخفاء زر العودة للأعلى
+                if (window.pageYOffset > 300) {
+                    backToTop.classList.add('visible');
+                } else {
+                    backToTop.classList.remove('visible');
+                }
+                
+                // تفعيل تأثيرات الظهور
+                fadeInOnScroll();
+            });
+            
+            // العودة إلى الأعلى
+            backToTop.addEventListener('click', function() {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+            
+            // تأثير الظهور عند التمرير
+            const fadeElements = document.querySelectorAll('.fade-in-up, .fade-in-left, .fade-in-right, .scale-in, .bounce-in');
+            
+            function fadeInOnScroll() {
+                fadeElements.forEach(element => {
+                    const elementTop = element.getBoundingClientRect().top;
+                    const elementVisible = 150;
+                    
+                    if (elementTop < window.innerHeight - elementVisible) {
+                        element.classList.add('visible');
+                    }
+                });
+            }
+            
+            // تطبيق التأثير عند التحميل
+            fadeInOnScroll();
+            
+            // تأثيرات إضافية للعناصر
+            document.querySelectorAll('.love-card, .message-box').forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-20px) scale(1.02)';
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0) scale(1)';
+                });
+            });
+            
+            // تأثيرات للموسيقى
+            const musicControls = document.querySelector('.music-controls');
+            musicControls.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-5px)';
+            });
+            
+            musicControls.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0)';
+            });
+            
+            // تمرير ناعم للروابط
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+                    
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+        }
+        
+        // تركيز المؤشر على حقل كلمة المرور عند تحميل الصفحة
+        window.onload = function() {
+            passwordInput.focus();
+            createFloatingElements();
+        };
+    </script>
+</body>
+</html>
